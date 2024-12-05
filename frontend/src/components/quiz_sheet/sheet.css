@@ -10,5 +10,6 @@ body{
     background:#fff;
     width: 700px;
     height: 800px;
-    border: yellow 1px solid;
+    border: #4CAF50 1px solid;
+    border-radius: 1rem;
 }
