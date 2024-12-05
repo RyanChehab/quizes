@@ -1,7 +1,14 @@
 body{
     background:#E0E0E0;
+    display: flex;
+    justify-content:center;
 }
 .Quiz{
     text-align: center;
-    
+}
+.sheet{
+    background:#fff;
+    width: 700px;
+    height: 800px;
+    border: yellow 1px solid;
 }

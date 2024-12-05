@@ -7,6 +7,7 @@ const Sheet = ()=>{
         <>
         <div>
             <h1 className="Quiz">Quiz</h1>
+            <div className="sheet flex justify-center"></div>
         </div>
         </>
     )

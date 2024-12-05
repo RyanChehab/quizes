@@ -12,6 +12,7 @@ const {name,setName,registerEmail,setRegisterEmail,registerPassword,setregisterP
     return(
         <>
         <h1 className='title'>Quizy</h1>
+        <h3>SignUp</h3>
         <div className='signup-form'>
             <form>
                 <div className='flex space-between mt-3'>
