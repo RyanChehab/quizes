@@ -5,8 +5,9 @@ import userRoutes from './routes.js '
 import cors from 'cors';
 dotenv.config()
 
-app.use(cors());
 const app = express();
+
+app.use(cors());
 
 // in order to acces the body 
 app.use(express.json());
