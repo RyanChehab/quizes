@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import jwt from 'jsonwebtoken';
 
 const userSchema = new mongoose.Schema({
     name:{
@@ -11,6 +12,10 @@ const userSchema = new mongoose.Schema({
         unique: true,
         lowercase: true,
     },
+    password: {
+        type: String,
+        required: true,
+      },
     points: {
         type: Number,
         default: 0,
