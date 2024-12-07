@@ -6,12 +6,15 @@ dotenv.config()
 
 const app = express();
 
+// in order to acces the body 
+app.use(express.json());
+
 // connection to db
 mongoose.connect(process.env.DB_URL)
 .then(()=>console.log("connected"))
 .catch((err)=> console.error('failed to connect'))
 
-app.use('api/users', userRoutes)
+app.use('/api/users', userRoutes)
 
 const PORT = process.env.PORT
 app.listen(PORT, ()=>{
