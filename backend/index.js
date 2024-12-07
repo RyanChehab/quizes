@@ -2,8 +2,10 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import userRoutes from './routes.js '
+import cors from 'cors';
 dotenv.config()
 
+app.use(cors());
 const app = express();
 
 // in order to acces the body 
