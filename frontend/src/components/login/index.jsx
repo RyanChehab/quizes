@@ -5,14 +5,14 @@ import './login.css';
 import '../../utilities.css'
 import {Link} from 'react-router-dom'
 const Login= ()=>{
-    const {email, setEmail,password,setPassword} = useContext(AuthContext);
+    const {email, setEmail,password,setPassword,HandleSubmit} = useContext(AuthContext);
 
     return(
         <>
         <h1 className='title'>Quizy</h1>
         <h3>Login</h3>
         <div className='login-form'>
-            <form>
+            <form onSubmit={(e)=> HandleSubmit(e,'signup')}>
                 <div className='flex space-between mt-3'>
                     <label>Email</label>
                     <input type="text"
@@ -25,7 +25,7 @@ const Login= ()=>{
                     <label>Password</label>
                     <input type="text"
                     value={password}
-                    onChange={(e)=>{setEmail(e.target.value)}}
+                    onChange={(e)=>{setPassword(e.target.value)}}
                     required
                     />
                 </div>
