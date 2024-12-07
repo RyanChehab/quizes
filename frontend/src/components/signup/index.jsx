@@ -7,14 +7,15 @@ import {Link} from 'react-router-dom'
 
 const Signup = ()=>{
     
-const {name,setName,registerEmail,setRegisterEmail,registerPassword,setregisterPassword} = useContext(AuthContext);
+const {name,setName,registerEmail,setRegisterEmail,registerPassword,setregisterPassword,HandleSubmit} = useContext(AuthContext);
+
 
     return(
         <>
         <h1 className='title'>Quizy</h1>
         <h3>SignUp</h3>
         <div className='signup-form'>
-            <form>
+            <form onSubmit={(e)=> HandleSubmit(e,'signup')}>
                 <div className='flex space-between mt-3'>
                     <label>Name</label>
                     <input type="text"
@@ -34,7 +35,7 @@ const {name,setName,registerEmail,setRegisterEmail,registerPassword,setregisterP
                 </div>
                 <div className='flex space-between mt-3'>
                     <label>Password</label>
-                    <input type="text"
+                    <input type="password"
                     value={registerPassword}
                     onChange={(e)=>{setregisterPassword(e.target.value)}}
                     required
