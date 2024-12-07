@@ -4,9 +4,8 @@ const QuestionContext = createContext();
 
 const QuestionProvider = ({ children }) => {
     const questions = [
-        "What is your name?",
-        "How old are you?",
-        "Where are you from?"
+        "do u know react?",
+        "how is lara doing?"
     ];
 
     const [responses, setResponses] = useState(questions.map(() => ""));
